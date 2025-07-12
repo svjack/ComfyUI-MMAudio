@@ -52,6 +52,7 @@ def copy_video_files():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     
     mp4_files = [f for f in os.listdir(SOURCE_DIR) if f.endswith('.mp4')]
+    mp4_files = sorted(map(str ,mp4_files))
     
     for file in mp4_files:
         src_path = os.path.join(SOURCE_DIR, file)
